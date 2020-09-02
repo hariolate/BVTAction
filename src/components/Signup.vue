@@ -49,6 +49,20 @@
                 Sign up
             </b-button>
         </b-form>
+        <b-alert
+                show
+                variant="danger"
+                dismissible
+                class="alert">
+            Sign up failed.
+        </b-alert>
+        <b-alert
+                show
+                variant="success"
+                dismissible
+                class="alert">
+            Sign up success.
+        </b-alert>
     </div>
 </template>
 
@@ -86,5 +100,12 @@
         width: 80%;
         margin-left: 10%;
         margin-top: 1vh;
+    }
+    .alert {
+        width: 50%;
+        max-width: 600px;
+        margin-left: 50%;
+        margin-top: 2vh;
+        transform: translateX(-50%);
     }
 </style>

@@ -17,7 +17,9 @@
                 alt="UNO Online"
                 id="logo"
         ></b-img>
-        <b-form id="form">
+        <b-form
+                @submit="onSubmit"
+                id="form">
             <b-form-group
                     id="emailInputGroup"
                     label="Email address:"
@@ -49,6 +51,13 @@
                 Login
             </b-button>
         </b-form>
+        <b-alert
+                show
+                variant="danger"
+                dismissible
+                class="alert">
+            Login failed.
+        </b-alert>
     </div>
 </template>
 
@@ -65,6 +74,12 @@
                     password: '',
                 }
             }
+        },
+        methods: {
+            onSubmit(evt) {
+              evt.preventDefault();
+              this.$router.push('/lobby')
+            },
         }
     }
 </script>
@@ -86,5 +101,12 @@
         width: 80%;
         margin-left: 10%;
         margin-top: 1vh;
+    }
+    .alert {
+        width: 50%;
+        max-width: 600px;
+        margin-left: 50%;
+        margin-top: 2vh;
+        transform: translateX(-50%);
     }
 </style>
