@@ -93,7 +93,9 @@
     }
     #form {
         width: 50%;
-        margin-left: 25%;
+        max-width: 600px;
+        margin-left: 50%;
+        transform: translateX(-50%);
         margin-top: 3vh;
     }
     #button {

@@ -21,7 +21,8 @@
         ></b-img>
         <b-button
                 variant="success"
-                id="start">
+                id="start"
+                v-on:click="findGame">
             <strong>Find a game</strong>
         </b-button>
         <h1 class="title">Recent Games</h1>
@@ -58,6 +59,11 @@
                     { ID: 'Mso1a', Score: '11234', WinRate: '0.74'},
                     { ID: 'Mso1a', Score: '11234', WinRate: '0.74'},
                 ]
+            }
+        },
+        methods: {
+            findGame() {
+                this.$router.push('/game');
             }
         }
     }
